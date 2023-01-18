@@ -42,15 +42,15 @@
 <!-- ---------------------------------------------------------------------------------------------------- -->
 
 @if(isset($user))
-<br/><h2 style="color:black; margin-left:40%; font-weight:bold; font-family:cursive; text-shadow:0 1px 2px grey; text-decoration:underline;">Posts by {{ Auth::user()->name }} </h2>  
+<br/><h2 style="color:black; margin-left:45%; font-weight:bold; font-family:cursive; text-shadow:0 1px 2px grey; text-decoration:underline;">Posts by {{ Auth::user()->name }} </h2>  
 @foreach($user as $row)
 <div class="container d-flex justify-content-center" style="text-align:center;">
     <div class="col-md-12 mt-5 card2">
-      
             <form action="{{url('detail/'.$row->id)}}" method="post" > 
             {{csrf_field()}}
 	            <a href="{{url('detail/'.$row->id)}}"><img src="storage/images/{{$row->image}}" height=200px width=300px></a>
-                <b style="font-size:20px; color:black; margin-left:100px;">{{$row->title}}</b>
+                <b style="font-size:20px; color:black; margin-left:100px;">{{$row->title}}</b>&nbsp;
+                <a href="{{'delete/'.$row->id}}" onclick="return confirm('Are you sure you want to delete this post?')"><img src="delete.jpeg" width=20px height=20px></a>
             </form>
     </div>
 </div>

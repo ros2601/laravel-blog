@@ -182,6 +182,7 @@
    </style>
 <body style=" background: linear-gradient(#facfcf, #9198e5);;">
     <div class="testbox" style="margin:5%;">
+    
         <form method="post" action="{{url('upload1')}}"  enctype="multipart/form-data"> 
         <h1>Write a Blog</h1>
           {{csrf_field()}}

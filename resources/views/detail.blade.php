@@ -37,6 +37,7 @@
 <br/>
 <h5 style="margin-left:78px; color:grey;">Comments: </h5>
 
+   
 @if(isset($cmnts))
     @foreach($cmnts as $row)
 

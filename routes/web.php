@@ -31,3 +31,4 @@ Route::get('/detail/{id}',"App\Http\Controllers\CustomAuthController@detail");
 Route::post('/comm/{id}',"App\Http\Controllers\CustomAuthController@comments");
 Route::post('/contact1',"App\Http\Controllers\CustomAuthController@contact");
 Route::get('/user',"App\Http\Controllers\CustomAuthController@user");
+Route::get('/delete/{id}',"App\Http\Controllers\CustomAuthController@delete");

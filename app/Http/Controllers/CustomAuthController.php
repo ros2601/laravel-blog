@@ -161,4 +161,11 @@ class CustomAuthController extends Controller
             return view('home',compact('user'));
         }
      }
+    public function delete($id)
+    {  
+        $obj= upload::find($id);    
+        unlink('storage/images/'.$obj->image);
+        $obj->delete();
+        return back();
+    }
 }
