@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class comment extends Model
 {
@@ -15,8 +16,8 @@ class comment extends Model
     {
         return $this->belongsTo(upload::class);
     }
-    public function user()
+   public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\Models\User','user_id');
     }
 }
