@@ -113,8 +113,8 @@ class CustomAuthController extends Controller
     public function detail($id)
     {
         $findrec=upload::where('id',$id)->get();
-        $cmnts = comment::where('post_id', $id)->with('upload')->orderBy('id','desc')->get();;
-        // $user = comment::where('user_id', $id)->with('user')->get();
+        $cmnts = comment::where('post_id', $id)->with('upload')->where('user_id',$id)->with('user')->orderBy('id','desc')->get();
+        // dd($cmnts);
         return view('detail',compact('findrec','cmnts'));
     }
     // --------------------------------------------------------------------
