@@ -48,13 +48,12 @@
         <!-- <img src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/charlie-chaplin-icon.png" class="relative rounded-lg -top-8 -mb-4 bg-white border h-20 w-20" alt="" loading="lazy"> -->
         <div class="flex flex-col w-full">
             <div class="flex flex-row justify-between">
-                <p class="relative text-xl whitespace-nowrap truncate overflow-hidden">{{$row->user}}</p>
+                <p class="relative text-xl whitespace-nowrap truncate overflow-hidden">{{$row->User->name}}</p>
                 <a class="text-gray-500 text-xl" href="#"><i class="fa-solid fa-trash"></i></a>
             </div>
             <p class="text-gray-400 text-sm">Posted On: {{$row->created_at}}</p>
         </div>
     </div>
-    <p class="-mt-4 text-gray-500">{{$row->comment}}</p>
 </div>
 
 </div>
