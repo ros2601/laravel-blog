@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
  
 class AuthController extends Controller
 {
+    public function index(){
+        return view('login');
+    }
+     public function signup(){
+        return view('registration');
+    }
     //--------------------------------for signup form-------------------------------------------------------- 
     public function signupsave(Request $request)
     {  
